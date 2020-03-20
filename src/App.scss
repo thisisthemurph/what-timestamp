@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $primary-font-color;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 2em);
+    margin: 0;
+    padding: 1em;
+    background-color: $primary-color;
+    box-shadow: 0px 2px 5px darken($primary-color, 10);
+
+    h1 {
+        margin: 0;
+        padding-bottom: .3em;
+        color: $primary-font-color;
+        text-shadow: 2px 2px 2px darken($primary-color, 10);
+    }
+}
+
+.outputs {
+    margin-top: 100px;
+}

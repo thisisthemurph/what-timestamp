@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+section {
+    padding: 1em;
+    border-bottom: 1px solid $secondary-font-color;
+
+    h2 {
+        color: $secondary-font-color;
+    }
+}
