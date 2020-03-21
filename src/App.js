@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import './App.scss';
 import TimeInput from './components/TimeInput';
 import TimeOutput from './components/TimeOutput';
+import './App.scss';
 
 class App extends Component {
   constructor() {
     super()
+
     this.state = {
       offset: Math.round(new Date().getTime() / 1000),
       autoUpdate: true
@@ -23,7 +24,12 @@ class App extends Component {
     this.setState({ offset: Math.round(new Date().getTime() / 1000) })
   }
 
+  /**
+   * Attempts to converts the state.offset into a human readable timestamp
+   * using the Unix epoch
+   */
   getUnixDate() {
+    // Number of seconds or nanoseconds since 1970
     const secsDate = new Date(Math.round(this.state.offset * 1000))
     const millDate = new Date(this.state.offset)
 
@@ -33,6 +39,10 @@ class App extends Component {
     ]
   }
 
+  /**
+   * Attempts to converts the state.offset into a human readable timestamp
+   * using the Cocoa epoch
+   */
   getCocoaDate() {
     const cocoaUnixDiff = 978307200 * 1000
 
